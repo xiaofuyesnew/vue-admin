@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "ask-server",
+      "script": "./src/app.mjs",
+      "cwd": "./",
+      "exec_mode": "cluster",
+      "error_file": "path/to/err.log",
+      "out_file": "path/to/out.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY/MM/DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 30,
+      "autorestart": true,
+      "restart_delay": "60",
+      "env": {
+        "NODE_ENV": "production",
+        "DATABASE_URL": "mysql://johndoe:randompassword@localhost:3306/mydb?schema=public",
+        "JWT_SECRET": "jwt_secret_string",
+        "JWT_EXPIRES_IN": "24h",
+        "PORT": 8000
+      }
+    }
+  ]
+}

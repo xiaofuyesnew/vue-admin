@@ -1,0 +1,22 @@
+{
+  "name": "vue-admin",
+  "type": "module",
+  "private": true,
+  "description": "vue-admin",
+  "author": "Allen Wong",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "dev": "concurrently \"pnpm -F vue-admin-server dev\" \"pnpm dev:client\"",
+    "dev:client": "pnpm -F vue-admin-client dev"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
+    "@unocss/eslint-plugin": "^0.58.3",
+    "concurrently": "^8.2.2"
+  }
+}
